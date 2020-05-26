@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2ea"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="#dec18e"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                style="@style/Title_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메인" />
+        </LinearLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/body"
+            android:layout_below="@id/introduction"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/SUM_Text"
+                        style="@style/Status_Big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전투력 : 40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_02"
+                    android:layout_below="@id/layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/STR_Text"
+                        style="@style/Status_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="근력 : 10" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/INT_Text"
+                        style="@style/Status_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="지력 : 10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_03"
+                    android:layout_below="@id/layout_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:id="@+id/HP_Text"
+                        style="@style/Status_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="체력 : 10" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/DEX_Text"
+                        style="@style/Status_Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="민첩 : 10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_04"
+                    android:layout_below="@id/layout_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/STAT_Text"
+                        style="@style/Status_Small_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="남은 스탯 : 0" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/conclusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/body"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_9"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/layout_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:background="#f6f6f4">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Dungeon_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_dungeon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Dungeon_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="던전"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Store_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_store" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Store_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="상점"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Main_btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_main_press" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Main_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="메인"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Log_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_log" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Log_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="기록"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Setting_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Setting_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="설정"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="FULL_BANNER"
+            ads:adUnitId="ca-app-pub-9082043936834188/6919972628">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/Notice"
+            style="@style/Clear_Button"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:text="1.2버전 공지사항\n\n\n-공지사항 기능 추가\n\n-무음 모드 추가        \n\n\n\n"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="91dp"
+            android:layout_marginLeft="91dp"
+            android:layout_marginBottom="179dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:text="Button" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/Tutorial_Img_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tutorial_2"
+            android:visibility="invisible" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tutorial_3"
+            android:id="@+id/Tutorial_Img_3"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tutorial_1"
+            android:id="@+id/Tutorial_Img_1"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

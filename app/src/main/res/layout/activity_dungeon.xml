@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dungeon">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2ea"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="#dec18e"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/Title_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="던전" />
+        </LinearLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/body"
+            android:layout_below="@id/introduction"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/Count_Text"
+                        style="@style/Time_Text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0분 0초" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_02"
+                    android:layout_below="@id/layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/CountSum_Text"
+                        style="@style/Time_Text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0분 0초" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_03"
+                    android:layout_below="@id/layout_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        style="@style/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="지상 - 훈련소 " />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/Enter_Btn0"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_04"
+                    android:layout_below="@id/layout_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/Dungeon_Text_1"
+                            style="@style/Category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지하 1층" />
+
+                        <TextView
+                            style="@style/Category_Detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dungeon_Text_1"
+                            android:text="10분 , 전투력 50이상" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/Enter_Btn1"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_05"
+                    android:layout_below="@id/layout_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/Category"
+                            android:id="@+id/Dungeon_Text_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지하 2층        " />
+
+                        <TextView
+                            style="@style/Category_Detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dungeon_Text_2"
+                            android:text="30분 , 전투력 100이상" />
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/Enter_Btn2"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_06"
+                    android:layout_below="@id/layout_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/Category"
+                            android:id="@+id/Dungeon_Text_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지하 3층        " />
+
+                        <TextView
+                            style="@style/Category_Detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dungeon_Text_3"
+                            android:text="60분 , 전투력 200이상" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/Enter_Btn3"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_07"
+                    android:layout_below="@id/layout_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/Category"
+                            android:id="@+id/Dungeon_Text_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지하 4층        " />
+
+                        <TextView
+                            style="@style/Category_Detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dungeon_Text_4"
+                            android:text="120분 , 전투력 400이상" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/Enter_Btn4"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_08"
+                    android:layout_below="@id/layout_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/Category"
+                            android:id="@+id/Dungeon_Text_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="지하 5층        " />
+
+                        <TextView
+                            style="@style/Category_Detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dungeon_Text_5"
+                            android:text="240분 , 전투력 800이상" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <Button
+                        android:id="@+id/Enter_Btn5"
+                        style="@style/Dungeon_enter"
+                        android:text="도전" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/conclusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/body"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_9"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/layout_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:background="#f6f6f4">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Dungeon_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_dungeon_press" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Dungeon_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="던전"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Store_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+                        android:src="@mipmap/ic_btn_store" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Store_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="상점"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Main_btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_main" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Main_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="메인"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Log_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_log" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Log_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="기록"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/Setting_Btn"
+                        style="@style/Main_Button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+
+
+                        android:src="@mipmap/ic_btn_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Setting_Btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-10dp"
+                        android:text="설정"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/Clear_Button"
+            android:id="@+id/Clear_Btn_Dungeon"
+            android:layout_gravity="center"
+            android:text="훈련 완료!!\n보상 : 6 스탯"
+            android:visibility="invisible" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="FULL_BANNER"
+            ads:adUnitId="ca-app-pub-9082043936834188/6919972628">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
